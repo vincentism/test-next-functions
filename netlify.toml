@@ -1,0 +1,7 @@
+[build]
+  publish = ".next"
+  command = "npm run build"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+[functions]
+directory = "netlify/functions"  # 显式指定目录（可选）
