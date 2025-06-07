@@ -1,5 +1,3 @@
-import { Config, Context } from "@netlify/functions";
-
 export default async (req, context) => {
   // const { city, country } = context.params;
 
@@ -11,7 +9,7 @@ export default async (req, context) => {
 
   // const response = await fetch('https://money.finance.sina.com.cn/quotes_service/api/json_v2.php/CN_MarketData.getKLineData?symbol=sz002095&scale=60&ma=no&datalen=2', {
   const response = await fetch('http://hq.sinajs.cn/list=sh600519', {
-    // next: { revalidate: 3600 },
+    next: { revalidate: 3600 },
     // cache: 'no-store',
     headers: { Referer: 'https://finance.sina.com.cn/' },
   });
