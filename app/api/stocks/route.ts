@@ -1,7 +1,7 @@
 
 import { NextRequest } from 'next/server';
 
-// export const runtime = 'edge';
+export const runtime = 'edge';
 
 var path = require("path");
 var fs = require("fs");
