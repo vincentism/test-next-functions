@@ -40,10 +40,10 @@ export async function GET(
 
 
   const data = await response.text();
-
+  
   // const id = (await params).id;
   // e.g. Query a database for user with ID `id`
-  return new Response(JSON.stringify(data), {
+  return new Response(JSON.stringify(data + process.env.NEXT_RUNTIME), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
